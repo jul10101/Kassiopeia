@@ -161,7 +161,7 @@ void KXMLInitializer::ParseCommandLine(int argc, char** argv)
         commandLineArgs.SetOption("KEMFIELD_CACHE", path);
     }
 
-    fArguments = move(commandLineArgs);
+    fArguments = std::move(commandLineArgs);
 }
 
 pair<string, KTextFile> KXMLInitializer::GetConfigFile()

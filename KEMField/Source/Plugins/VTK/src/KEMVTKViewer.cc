@@ -78,7 +78,7 @@ KEMVTKViewer::KEMVTKViewer(KSurfaceContainer& aSurfaceContainer)
     fLineSegmentPolyApprox = 6;
     fArcPolyApprox = 120;
 
-    fQualityMeasure = VTK_QUALITY_SCALED_JACOBIAN;
+    fQualityMeasure = (int)vtkMeshQuality::QualityMeasureTypes::SCALED_JACOBIAN;
 
     for (KSurfaceContainer::iterator it = aSurfaceContainer.begin(); it != aSurfaceContainer.end(); it++) {
         if (! *it)
